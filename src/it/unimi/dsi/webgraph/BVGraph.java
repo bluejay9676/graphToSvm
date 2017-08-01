@@ -2338,6 +2338,11 @@ public class BVGraph extends ImmutableGraph implements CompressionFlags {
 		String source, dest;
 		Class<?> graphClass;
 		int flags = 0;
+		args = new String[4];
+		args[0] = "-o";
+		args[1] = "-O";
+		args[2] = "-L";
+		args[3] = "clueweb12";
 
 		SimpleJSAP jsap = new SimpleJSAP( BVGraph.class.getName(), "Compresses differentially a graph. Source and destination are basenames from which suitable filenames will be stemmed; alternatively, if the suitable option was specified, source is a spec (see below). For more information about the compression techniques, see the Javadoc documentation.",
 				new Parameter[] {
